@@ -2,10 +2,41 @@
   <title>
     测试
   </title>
-  <p>
-    随便打了一段
+  <style type="text/css">
+  .p1 {
+	  text-align: center;
+	  font-size: 30;
+}
+  .pic1 {
+	  text-align: center;
+}
+  .p2 {
+	  text-align: center;
+	  font-size: 20;
+}
+  </style>
+<p class="p1">
+    我是大佬,在线征婚
   </p>
-  <!--<img src="https://kasho-no-yume.github.io/images/c309f4cf43d18d8e99befd651a5d815c.jpg" alt="图片显示错误"/>-->
-  <!--embed src="https://kasho-no-yume.github.io/mahou_shoujo/mahoushoujobuster.swf" type="application/x-shockwave-flash" quality="high" width="1000" height="800"/><span style="line-height:1.5;"></span>-->
+<div class="pic1"><img src="https://kasho-no-yume.github.io/images/dalao.png" alt="图片显示错误" class="pic1"/></div>
+<div>
+  <p class="p2">本人陶广瑞，男，是个阳光少年，喜欢唱跳rap打篮球。现在最大的梦想就是能找一个肥婆脱单。现面向东北大学秦皇岛分校在线征婚。</p>
+</div>
+  <div class="p2">
+	  <p>
+		  本人幽默风趣，并且对电脑只是有很深的造诣，于是写了这个网页在线征婚。本人现在物联网专业大类排名绩点前1%，如果mm和我一个专业的话我能带您飞。
+	  </p>
+	</div>
+<div class="p2">
+	  <p>
+		  本人电话18840000398，注意夜晚12:00到早上11:00本人都在充电，请勿打电话给本人。
+	  </p>
+</div>
+	<div class="p2">
+	  <p>
+		  如果不想和我贴贴，就不用打电话骚扰我。
+	  </p>
+</div>
+<!--embed src="https://kasho-no-yume.github.io/mahou_shoujo/mahoushoujobuster.swf" type="application/x-shockwave-flash" quality="high" width="1000" height="800"/><span style="line-height:1.5;"></span>-->
 </html>
 

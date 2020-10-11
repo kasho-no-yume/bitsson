@@ -2,6 +2,53 @@
   <title>
     测试
   </title>
+	<head>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+		</script>
+		<script>
+			var Bmob = require('Bmob-2.2.5.min.js');
+			Bmob.initialize("11243455f3406d4a", "123321");
+		</script>
+		<body onLoad="load();">
+		<script>
+			function load()
+			{
+				var result;
+				var query = Bmob.Query('willing');
+				query.count().then(res => {
+				  //console.log('共有${res}条记录');
+					result=res;
+					changenumber(result);
+				});
+				var record;
+				query.find().then(res=>{
+					record=res;
+				});
+				for(var i=0;i<(result>=100?100:result);i++)
+					{
+						$("list").after("<div><p class='p2'>"+record[i].description+"</p></div>");
+					}
+			}
+			function subform()
+			{
+				var content=$('#willing').value;
+				var query = Bmob.Query('willing');
+				query.set("description",content);
+				query.save().then(res => {
+				  console.log(res)
+					alert("成功了!!!");
+				}).catch(err => {
+				  console.log(err)
+				})
+			}
+
+			function changenumber(var num)
+			{
+				$("number").text("目前的有意向者   "+num+"名");
+			}
+		</script>
+		</body>
+	</head>
   <style type="text/css">
   .p1 {
 	  text-align: center;
@@ -14,6 +61,10 @@
 	  text-align: center;
 	  font-size: 20;
 }
+	.title{
+		  text-align: center;
+		font-size: 25;
+	  }
   </style>
 <p class="p1">
     我是大佬,在线征婚
@@ -37,6 +88,16 @@
 		  如果不想和我贴贴(男的也行)，就不要打电话骚扰我。
 	  </p>
 </div>
+	<div>
+		<p class="title">请有意向者在下面留下联系方式</p>
+	</div>
+	<div class="p1" >
+		<input style="height: 40px;width: 300px" type="text" id="willing"/>
+		<input type="submit" style="height: 40px" value="提交" onclick="subform()"/>
+	</div>
+	<div id="list" class="title">
+		<p id="number">目前的有意向者   0名</p>
+	</div>
 <!--embed src="https://kasho-no-yume.github.io/mahou_shoujo/mahoushoujobuster.swf" type="application/x-shockwave-flash" quality="high" width="1000" height="800"/><span style="line-height:1.5;"></span>-->
 </html>
 
